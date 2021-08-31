@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Роут для API - получение списка статей
+Route::get("articles", 'App\Http\Controllers\ArticleController@index')->name('articles.index');
